@@ -15,11 +15,7 @@ public class SpamSphere : MonoBehaviour
         CorutineSphere = InfinitiSphere(2f);
         StartCoroutine(CorutineSphere);
 
-
-
-
         // rend.material.shader = Shader.Find("CubeSpam");
-
 
     }
 
@@ -40,7 +36,7 @@ public class SpamSphere : MonoBehaviour
     {
         
     }
-    public void NewColor()
+    public void NewColor() //Switch para cambiar el color al azar
     {
         Renderer rend = GetComponent<Renderer>();
         RandomColor = Random.Range(1, 4);
@@ -58,7 +54,7 @@ public class SpamSphere : MonoBehaviour
                 break;
         }
     }
-    public void NewScale()
+    public void NewScale() //Switch para cambair su escala al azar 
     {
         RandomScale = Random.Range(0, 2);
         switch (RandomScale)

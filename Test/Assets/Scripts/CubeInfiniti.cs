@@ -13,14 +13,8 @@ public class CubeInfiniti : MonoBehaviour
     {
        // transform.rotation = Quaternion.identity;
         Corutine = InfinitCube(1f);
-        StartCoroutine(Corutine);
-
-       
-
-       
+        StartCoroutine(Corutine);  
        // rend.material.shader = Shader.Find("CubeSpam");
-       
-
     }
 
     IEnumerator InfinitCube(float seconds)
@@ -28,19 +22,13 @@ public class CubeInfiniti : MonoBehaviour
 
         yield return new WaitForSeconds(seconds);
         NewColor();
-        Instantiate(Prefab, new Vector3(0,0,0), Quaternion.identity);
-        Object.Destroy(Prefab, 5f);
+        Instantiate(Prefab, new Vector3(0,0,0), Quaternion.identity); //Para que se genere el cubo en la posicion  incial
+        Object.Destroy(Prefab, 5f); //Para destruir el Cubo despues de 5 segundos 
        
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    
-
-    }
-    public void NewColor()
+    public void NewColor() //El switch me permite ir cambaindo de colores automaticamente bueno al azar SleekHell
     {
         Renderer rend = GetComponent<Renderer>();
         RandomColor = Random.Range(1, 4);

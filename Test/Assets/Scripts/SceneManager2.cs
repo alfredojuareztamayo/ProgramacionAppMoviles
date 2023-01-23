@@ -5,27 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager2 : MonoBehaviour
 {
-    public int ActualScene;
-    // Start is called before the first frame update
-   
-    void Start()
-    {
-     
-
-        
-    }
-
-   
-
+    public int ActualScene; 
+    //Variable para cambiar de escena
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) //Input que identfica cuando se presiona el mouse
         {
             ChangeScene();
         }
     }
-    public void ChangeScene()
+    public void ChangeScene() //puse un Switch para verme mas pro :D atte: Sleekhell aka juan Alfredo
     {
         switch (ActualScene)
         {
